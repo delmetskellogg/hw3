@@ -1,13 +1,5 @@
 <h1>New Contact</h1>
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.date "posted_on"
-    t.integer "place_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-
 <%= form_with model: @post do |form| %>
   <p>
     <%= form.label "Title" %>
@@ -20,5 +12,6 @@
 
   <!-- transfer state -->
   <%= form.hidden_field "place_id" %>
+  <%= form.hidden_field :date, value: Date.current %>
   <%= form.submit %>
 <% end %>
