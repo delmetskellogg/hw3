@@ -1,10 +1,10 @@
 <h1><%= @place.name %></h1>
 
-<h3>Contacts</h3>
+<h3>Posts</h3>
 
 <ul>
   <% for post in @place.posts %>
-    <li><%= "#{post.title}, #{post.description}, #{post.date}" %></li>
+    <li><%= "#{post.title}, #{post.description}, #{post.posted_on}" %></li>
   <% end %>
 </ul>
 

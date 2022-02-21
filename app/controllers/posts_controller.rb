@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
     def new
         @post = Post.new
-        @post = Post.find(params["place_id"])
+        @place = Place.find(params["place_id"])
         @post.place_id = @place.id
       end
     

@@ -1,4 +1,4 @@
-<h1>New Contact</h1>
+<h1>New Post</h1>
 
 <%= form_with model: @post do |form| %>
   <p>
@@ -12,6 +12,6 @@
 
   <!-- transfer state -->
   <%= form.hidden_field "place_id" %>
-  <%= form.hidden_field :date, value: Date.current %>
+  <%= form.hidden_field "posted_on", value: Date.current %>
   <%= form.submit %>
 <% end %>

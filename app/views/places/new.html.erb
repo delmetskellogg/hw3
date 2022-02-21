@@ -3,10 +3,9 @@
 
 <%= form_with model: @place do |form| %>
   <p>
-    <%= form.label "Location" %>
-    <%= form.text_field "place" %>
+    <%= form.label "place" %>
+    <%= form.text_field "name" %>
 
-  <%= form.hidden_field "place_id" %>
   
   <%= form.submit %>
 <% end %>
